@@ -1,3 +1,5 @@
-from datapulse.core import *
+from datapulse.core import benchmark
 
-def test_benchmark():assert benchmark("x",lambda:3)[1]==3
+def test_benchmark():
+    result, value = benchmark("identity", lambda: 42)
+    assert result.name == "identity" and value == 42 and result.elapsed_ms >= 0
