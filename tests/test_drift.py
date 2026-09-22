@@ -1,3 +1,5 @@
+import pytest
+
 from datapulse.drift import absolute_rate_delta
 
 
